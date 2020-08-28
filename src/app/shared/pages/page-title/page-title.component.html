@@ -1,0 +1,42 @@
+<h2>
+  <img
+    src="https://tutorialedge.net/images/angularjs.png"
+    alt=""
+    class="-oneX-logo"
+    style="height: 35px; width: 50px;"
+  />Page title in Angular
+</h2>
+<hr />
+<p>
+  When it comes to SPAs, many developers assume that there is no way to change
+  the page title to match the content shown on the page. This is incorrect.
+</p>
+<h3>Use the Title service</h3>
+<p>
+  Fortunately, Angular bridges the gap by providing a Title service as part of
+  the Browser platform. The Title service is a simple class that provides an API
+  for getting and setting the current HTML document title:
+</p>
+<p>
+  <code>getTitle()</code> : string—Gets the title of the current HTML document.
+</p>
+<p>
+  <code>setTitle( newTitle : string )</code>—Sets the title of the current HTML
+  document.
+</p>
+<p>
+  Full Documentation lives here: https://angular.io/guide/set-document-title
+</p>
+<br />
+<br />
+<h3>Example:</h3>
+<p>
+  In this example we bind the 'setTitle' method to a click event on all the
+  items in the left navigation
+</p>
+
+<pre>
+  <code class="hljs javascript">
+   < a class="linkList" (click)="setTitle('Aria-live example')" routerLink="/aria-live">Aria-Live /a >
+  </code>
+</pre>

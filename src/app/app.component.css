@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+}
+
+.content-main {
+  margin-top: 50px;
+  display: flex;
+  align-items: stretch;
+}
+
+.content-body {
+  max-width: 500px;
+  padding: 1em 0 1em 1em;
+  flex: 1;
+  margin-right: 2em;
+}
+
+.content-body h1 {
+  margin-top: 0;
+}

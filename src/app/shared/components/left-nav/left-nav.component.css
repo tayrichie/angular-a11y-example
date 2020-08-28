@@ -1,0 +1,18 @@
+img {
+  width: 70px;
+  margin: 0 auto;
+}
+
+.left-channel-navigation {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  background: #eee;
+  position: sticky;
+  padding: 1em 0;
+  flex: 0 0 200px;
+}
+
+.left-channel-container {
+  text-align: left;
+}

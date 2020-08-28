@@ -1,0 +1,45 @@
+<div
+  id="left-channel"
+  class="span3 collapsed left-channel-navigation"
+  style="height: auto;"
+>
+  <img
+    src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg"
+    alt="Angular Logo"
+    class="logo"
+  />
+  <div id="left-channel-content" class="left-channel-container noindex">
+    <div id="left-channel-links" role="navigation" aria-label="Sub Navigation">
+      <ul>
+        <li>
+          <a class="linkList" (click)="setTitle('Home')" routerLink="/">Home</a>
+        </li>
+        <li>
+          <a
+            class="linkList"
+            (click)="setTitle('Aria-live example')"
+            routerLink="/aria-live"
+            >Aria-Live</a
+          >
+        </li>
+        <li><a class="linkList" routerLink="/focus">Focus Management</a></li>
+        <li>
+          <a
+            class="linkList"
+            (click)="setTitle('ng Aria Example')"
+            routerLink="/ng-aria"
+            >ng Aria</a
+          >
+        </li>
+        <li>
+          <a
+            class="linkList"
+            (click)="setTitle('Page Title example')"
+            routerLink="/page-title"
+            >Page Title</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
