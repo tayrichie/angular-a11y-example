@@ -1,27 +1,20 @@
-<h2>
-  <img
-    src="https://tutorialedge.net/images/angularjs.png"
-    alt=""
-    class="-oneX-logo"
-    style="height: 35px; width: 50px;"
-  />Aria-live in Angular
-</h2>
+<h2>Aria-live in Angular</h2>
 <hr />
 <p>
-  ARIA-Live (or role=“alert”) has been a pretty steady way to alert users of
-  status change, or any type of announcement.
+  ARIA-Live (or role=“alert”) has been a pretty steady way to alert
+  users of status change, or any type of announcement.
 </p>
 <p>
-  Using ASYNC events to inject the content may cause the announcement, whether
-  live or alert, not to be read in time for the screen reader.
+  Using ASYNC events to inject the content may cause the announcement,
+  whether live or alert, not to be read in time for the screen reader.
 </p>
 <p></p>
 <br />
 <h4>Test Cases</h4>
 <p>
-  ng-Aria and Aria-Live both can work, but can also have some mixed results as
-  far as reading dynamic content. Below are multiple test cases to show case the
-  different options with aria-live:
+  ng-Aria and Aria-Live both can work, but can also have some mixed
+  results as far as reading dynamic content. Below are multiple test
+  cases to show case the different options with aria-live:
 </p>
 <h5>1) Use of Aria-live in blank <b>div</b></h5>
 
@@ -42,23 +35,3 @@
   This content was created async, with aria live on tag
 </p>
 <br />
-
-<h5>3) Use of ng-message and ng Aria (Angular 7)</h5>
-
-<form name="myForm">
-  <label>Enter your name:</label>
-  <input
-    type="text"
-    name="myName"
-    ng-model="name"
-    ng-minlength="5"
-    ng-maxlength="20"
-    required
-  />
-
-  <div ng-messages="myForm.myName.$error" style="color: maroon;">
-    <div ng-message="required">You did not enter a field</div>
-    <div ng-message="minlength">Your field is too short</div>
-    <div ng-message="maxlength">Your field is too long</div>
-  </div>
-</form>

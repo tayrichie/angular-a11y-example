@@ -9,6 +9,6 @@ export class PageTitleComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    // document.title = "This is a page title!";
+    // document.title = "This is my cool app!";
   }
 }

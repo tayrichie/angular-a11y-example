@@ -23,4 +23,7 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+  // anytime a route changes, put focus on the body
+  // add aria-current to the active link
+}
