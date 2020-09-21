@@ -1,17 +1,18 @@
 <h2 tabindex="-1">
   Focus management
 </h2>
-<form action="/action_page.php">
-  First name:<br />
-  <input type="text" name="firstname" value="Mickey" />
-  <br />
-  Last name:<br />
-  <input type="text" name="lastname" value="Mouse" />
-  <br /><br />
-  <input type="submit" value="Submit" class="btn-primary" />
-</form>
+<div>
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstname" value="Mickey" />
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastname" value="Mouse" />
+
+  <button type="submit" value="Submit" class="btn-primary">
+    Submit
+  </button>
+</div>
 
 <p>
-  If you click the "Submit" button, the form-data will be sent to a
-  page called "/action_page.php".
+  If you click the "Submit" button, a modal will open to determine the
+  success of the form action.
 </p>

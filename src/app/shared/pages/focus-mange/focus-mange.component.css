@@ -6,3 +6,9 @@
   padding: 1em;
   margin-bottom: 0.5em;
 }
+
+input,
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}
