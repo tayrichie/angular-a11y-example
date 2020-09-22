@@ -11,8 +11,7 @@ import { HomeComponent } from "./shared/pages/home/home.component";
 import { AriaLiveComponent } from "./shared/pages/aria-live/aria-live.component";
 import { PageTitleComponent } from "./shared/pages/page-title/page-title.component";
 import { FocusMangeComponent } from "./shared/pages/focus-mange/focus-mange.component";
-import { NgAriaComponent } from "./shared/pages/ng-aria/ng-aria.component";
-import { ngAria } from "angular-aria/angular-aria.js";
+import { KeyboardNavComponent } from "./shared/pages/keyboard-nav/keyboard-nav.component";
 
 @NgModule({
   declarations: [
@@ -23,8 +22,8 @@ import { ngAria } from "angular-aria/angular-aria.js";
     HomeComponent,
     AriaLiveComponent,
     PageTitleComponent,
-    NgAriaComponent,
-    FocusMangeComponent
+    FocusMangeComponent,
+    KeyboardNavComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [Title],
