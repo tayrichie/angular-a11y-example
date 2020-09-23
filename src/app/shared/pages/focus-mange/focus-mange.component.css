@@ -12,3 +12,11 @@ label {
   display: block;
   margin-bottom: 0.5em;
 }
+
+.modal-wrapper {
+  display: none;
+}
+
+.modal-wrapper.open {
+  display: block;
+}

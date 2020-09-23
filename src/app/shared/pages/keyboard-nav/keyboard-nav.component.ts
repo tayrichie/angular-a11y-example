@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef } from "@angular/core";
 import { Title } from "@angular/platform-browser";
+import { CheckboxModule } from "primeng/checkbox";
 
 @Component({
   selector: "app-keyboard-nav",

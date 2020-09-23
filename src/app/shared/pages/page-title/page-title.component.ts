@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef } from "@angular/core";
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: "app-page-title",
@@ -6,9 +7,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./page-title.component.css"]
 })
 export class PageTitleComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private titleService: Title,
+    private element: ElementRef
+  ) {}
 
-  ngOnInit() {
-    // document.title = "This is my cool app!";
+  public ngOnInit() {
+    this.titleService.setTitle("Page Titles in Angular");
+    this.element.nativeElement.querySelector("h2").focus();
   }
 }

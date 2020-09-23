@@ -7,9 +7,18 @@
   <label for="lastName">Last Name:</label>
   <input type="text" id="lastName" name="lastname" value="Mouse" />
 
-  <button type="submit" value="Submit" class="btn-primary">
+  <button
+    (click)="toggleModal()"
+    type="submit"
+    value="Submit"
+    class="btn-primary"
+  >
     Submit
   </button>
+
+  <div class="modal-wrapper" ng-class="{'open': isVisible}">
+    Testing testing
+  </div>
 </div>
 
 <p>

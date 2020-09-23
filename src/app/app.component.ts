@@ -1,4 +1,4 @@
-import { Component, ElementRef } from "@angular/core";
+import { Component } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 
 @Component({
@@ -12,10 +12,9 @@ export class AppComponent {
   dynamContent = "Plain old boring content";
   buttonClicked = false;
 
-  constructor(private titleService: Title, private element: ElementRef) {}
+  constructor(private titleService: Title) {}
 
   public ngOnInit() {
     this.titleService.setTitle("My awesome app");
-    this.element.nativeElement.querySelector(".-oneX-header").focus();
   }
 }

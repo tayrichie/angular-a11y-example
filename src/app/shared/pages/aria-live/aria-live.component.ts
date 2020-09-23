@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef } from "@angular/core";
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: "app-aria-live",
@@ -8,9 +9,15 @@ import { Component, OnInit } from "@angular/core";
 export class AriaLiveComponent implements OnInit {
   dynamContent = "Plain old boring content";
   buttonClicked = false;
-  constructor() {}
+  constructor(
+    private titleService: Title,
+    private element: ElementRef
+  ) {}
 
-  ngOnInit() {}
+  public ngOnInit() {
+    this.titleService.setTitle("Aria Live and Alert Regions");
+    this.element.nativeElement.querySelector("h2").focus();
+  }
 
   public onCreateDynamicContent() {
     this.dynamContent = "This content was created async";

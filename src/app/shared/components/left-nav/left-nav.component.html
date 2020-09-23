@@ -8,11 +8,23 @@
     alt="Angular Logo"
     class="logo"
   />
-  <div id="left-channel-content" class="left-channel-container noindex">
-    <div id="left-channel-links" role="navigation" aria-label="Sub Navigation">
+  <div
+    id="left-channel-content"
+    class="left-channel-container noindex"
+  >
+    <div
+      id="left-channel-links"
+      role="navigation"
+      aria-label="Sub Navigation"
+    >
       <ul>
         <li>
-          <a class="linkList" (click)="setTitle('Home')" routerLink="/">Home</a>
+          <a
+            class="linkList"
+            (click)="setTitle('Home')"
+            routerLink="/"
+            >Home</a
+          >
         </li>
         <li>
           <a
@@ -22,14 +34,8 @@
             >Aria-Live</a
           >
         </li>
-        <li><a class="linkList" routerLink="/focus">Focus Management</a></li>
         <li>
-          <a
-            class="linkList"
-            (click)="setTitle('ng Aria Example')"
-            routerLink="/ng-aria"
-            >ng Aria</a
-          >
+          <a class="linkList" routerLink="/focus">Focus Management</a>
         </li>
         <li>
           <a
@@ -37,6 +43,14 @@
             (click)="setTitle('Page Title example')"
             routerLink="/page-title"
             >Page Title</a
+          >
+        </li>
+        <li>
+          <a
+            class="linkList"
+            (click)="setTitle('Keyboard Navigation example')"
+            routerLink="/keyboard-navigation"
+            >Keyboard Navigation</a
           >
         </li>
       </ul>
