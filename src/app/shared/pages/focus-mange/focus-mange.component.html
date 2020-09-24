@@ -14,6 +14,19 @@
     <li>Move focus to skip link</li>
   </ol>
   <h2>Dynamically Added Content</h2>
+  <p>Multiple ways to control focus within an Angular applications</p>
+
+  <ol>
+    <li>Use of the component lifecycle</li>
+    <li>Use of CDK (Material) to initial focus</li>
+  </ol>
+  <button (click)="toggleAutoFocus()" class="btn-primary">
+    Show autofocus
+  </button>
+  <div *ngIf="ariaFocus">
+    <label for="autoInput">Auto Focus input field</label>
+    <input id="autoInput" type="text" cdkFocusInitial cdkFocusRegionStart />
+  </div>
   <h2>Modals</h2>
   <button
     (click)="toggleModal()"
