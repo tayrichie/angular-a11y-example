@@ -17,4 +17,8 @@ export class AppComponent {
   public ngOnInit() {
     this.titleService.setTitle("My awesome app");
   }
+
+  //public onPageFocus() {
+  // document.body.focus();
+  //}
 }

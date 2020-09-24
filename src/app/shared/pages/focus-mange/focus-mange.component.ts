@@ -7,18 +7,15 @@ import { Title } from "@angular/platform-browser";
   styleUrls: ["./focus-mange.component.css"]
 })
 export class FocusMangeComponent implements OnInit {
-  constructor(
-    private titleService: Title,
-    private element: ElementRef
-  ) {}
+  constructor(private titleService: Title, private element: ElementRef) {}
 
   ngOnInit() {
     this.titleService.setTitle("Focus Management");
-    this.element.nativeElement.querySelector("h2").focus();
+    this.element.nativeElement.querySelector("h1").focus();
   }
 
   toggleModal() {
-    // this.isVisible = !this.isVisible;
+    //this.isVisible = !this.isVisible;
     console.log("toggle modal");
   }
 }
