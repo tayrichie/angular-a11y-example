@@ -25,7 +25,7 @@
   </button>
   <div *ngIf="ariaFocus">
     <label for="autoInput">Auto Focus input field</label>
-    <input id="autoInput" type="text" cdkFocusInitial cdkFocusRegionStart />
+    <input id="autoInput" type="text" [a11yAutoFocus]="ariaFocus" />
   </div>
   <h2>Modals</h2>
   <button

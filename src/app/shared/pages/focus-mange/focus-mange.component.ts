@@ -18,7 +18,10 @@ export class FocusMangeComponent implements OnInit {
 
   toggleAutoFocus() {
     this.ariaFocus = true;
-    this.element.nativeElement.querySelector("#autoInput").focus();
+    //Dynamic-Focus Option 1
+    setTimeout(() => {
+      //  this.element.nativeElement.querySelector("#autoInput").focus();
+    }, 300);
   }
   toggleModal() {
     //this.isVisible = !this.isVisible;
