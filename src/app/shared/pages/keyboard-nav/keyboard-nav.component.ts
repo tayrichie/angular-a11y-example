@@ -22,6 +22,6 @@ export class KeyboardNavComponent implements OnInit {
   }
 
   actualButtonClick() {
-    console.log("button click");
+    alert("actual button click");
   }
 }
