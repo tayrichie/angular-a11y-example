@@ -12,6 +12,7 @@ import { PageTitleComponent } from "./shared/pages/page-title/page-title.compone
 import { FocusMangeComponent } from "./shared/pages/focus-mange/focus-mange.component";
 import { KeyboardNavComponent } from "./shared/pages/keyboard-nav/keyboard-nav.component";
 import { AutoFocusDirective } from "./shared/directives/auto-focus.directive";
+import { A11yModule } from "@angular/cdk/a11y";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { AutoFocusDirective } from "./shared/directives/auto-focus.directive";
     KeyboardNavComponent,
     AutoFocusDirective
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, A11yModule],
   providers: [Title],
   bootstrap: [AppComponent]
 })

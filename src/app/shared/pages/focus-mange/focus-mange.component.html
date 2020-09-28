@@ -27,17 +27,25 @@
     <label for="autoInput">Auto Focus input field</label>
     <input id="autoInput" type="text" [a11yAutoFocus]="ariaFocus" />
   </div>
-  <h2>Modals</h2>
-  <button
-    (click)="toggleModal()"
-    type="submit"
-    value="Submit"
-    class="btn-primary"
-  >
-    Open modal
+  <h2>Focus Trap Directive</h2>
+  <p>Click next to continue to the next part of the form</p>
+  <button (click)="toggleNext()" class="btn-primary">
+    Next
   </button>
-
-  <div class="modal-wrapper" ng-class="{'open': isVisible}">
-    Testing testing
+  <div
+    id="newForm"
+    *ngIf="formNext"
+    style="border: double; padding: 5px;"
+    tabindex="-1"
+    cdkTrapFocus
+  >
+    <span>Please enter your information below</span>
+    <label for="firstname">First Name</label>
+    <input id="firstname" type="text" />
+    <label for="lastname">Last Name</label>
+    <input id="lastname" type="text" />
+    <label for="phone">Phone</label>
+    <input id="phone" type="text" />
+    <button>Continue</button>
   </div>
 </div>

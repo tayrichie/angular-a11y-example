@@ -9,6 +9,7 @@ import { Title } from "@angular/platform-browser";
 export class FocusMangeComponent implements OnInit {
   constructor(private titleService: Title, private element: ElementRef) {}
   ariaFocus = false;
+  formNext = false;
   ngOnInit() {
     this.titleService.setTitle("Focus Management");
 
@@ -21,6 +22,12 @@ export class FocusMangeComponent implements OnInit {
     //Dynamic-Focus Option 1
     setTimeout(() => {
       //  this.element.nativeElement.querySelector("#autoInput").focus();
+    }, 300);
+  }
+  toggleNext() {
+    this.formNext = true;
+    setTimeout(() => {
+      this.element.nativeElement.querySelector("#newForm").focus();
     }, 300);
   }
   toggleModal() {
