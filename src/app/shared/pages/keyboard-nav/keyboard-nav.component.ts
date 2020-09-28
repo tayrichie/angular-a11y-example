@@ -1,6 +1,5 @@
 import { Component, OnInit, ElementRef } from "@angular/core";
 import { Title } from "@angular/platform-browser";
-import { CheckboxModule } from "primeng/checkbox";
 
 @Component({
   selector: "app-keyboard-nav",
@@ -16,5 +15,13 @@ export class KeyboardNavComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle("Keyboard Navigation");
     this.element.nativeElement.querySelector("h2").focus();
+  }
+
+  testButtonClick() {
+    alert("fake button click!");
+  }
+
+  actualButtonClick() {
+    console.log("button click");
   }
 }
