@@ -1,27 +1,43 @@
-<h2 tabindex="-1">
+<h1 tabindex="-1">
   Focus management
-</h2>
+</h1>
+<h2>Routing Focus (Page to page navigation)</h2>
 <div>
-  <label for="firstName">First Name:</label>
-  <input type="text" id="firstName" name="firstname" value="Mickey" />
-  <label for="lastName">Last Name:</label>
-  <input type="text" id="lastName" name="lastname" value="Mouse" />
+  <p>When navigating between pages in Angular, there is no management focus.</p>
+  <p>
+    This makes it very difficult for keyboard users and assistive technology
+    users to be able to understand where they are or even if they moved pages.
+  </p>
+  <ol>
+    <li>Move focus to first heading</li>
+    <li>Move focus to main body of page</li>
+    <li>Move focus to skip link</li>
+  </ol>
+  <h2>Dynamically Added Content</h2>
+  <p>Multiple ways to control focus within an Angular applications</p>
 
+  <ol>
+    <li>Use of the component lifecycle</li>
+    <li>Use of CDK (Material) to initial focus</li>
+  </ol>
+  <button (click)="toggleAutoFocus()" class="btn-primary">
+    Show autofocus
+  </button>
+  <div *ngIf="ariaFocus">
+    <label for="autoInput">Auto Focus input field</label>
+    <input id="autoInput" type="text" [a11yAutoFocus]="ariaFocus" />
+  </div>
+  <h2>Modals</h2>
   <button
     (click)="toggleModal()"
     type="submit"
     value="Submit"
     class="btn-primary"
   >
-    Submit
+    Open modal
   </button>
 
   <div class="modal-wrapper" ng-class="{'open': isVisible}">
     Testing testing
   </div>
 </div>
-
-<p>
-  If you click the "Submit" button, a modal will open to determine the
-  success of the form action.
-</p>

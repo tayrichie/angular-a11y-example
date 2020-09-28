@@ -7,18 +7,24 @@ import { Title } from "@angular/platform-browser";
   styleUrls: ["./focus-mange.component.css"]
 })
 export class FocusMangeComponent implements OnInit {
-  constructor(
-    private titleService: Title,
-    private element: ElementRef
-  ) {}
-
+  constructor(private titleService: Title, private element: ElementRef) {}
+  ariaFocus = false;
   ngOnInit() {
     this.titleService.setTitle("Focus Management");
-    this.element.nativeElement.querySelector("h2").focus();
+
+    //Page-Focus Option 1
+    // this.element.nativeElement.querySelector("h1").focus();
   }
 
+  toggleAutoFocus() {
+    this.ariaFocus = true;
+    //Dynamic-Focus Option 1
+    setTimeout(() => {
+      //  this.element.nativeElement.querySelector("#autoInput").focus();
+    }, 300);
+  }
   toggleModal() {
-    // this.isVisible = !this.isVisible;
+    //this.isVisible = !this.isVisible;
     console.log("toggle modal");
   }
 }
